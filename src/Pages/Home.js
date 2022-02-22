@@ -2,7 +2,6 @@
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
 import ProjectCard from "../Components/ProjectCard";
-import projects from "../Data/projects.json";
 
 const Home = () => {
   return (
