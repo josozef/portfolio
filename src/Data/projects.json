@@ -1,0 +1,14 @@
+[
+  {
+    "id": "kaplanlj",
+    "name": "Learner Journey",
+    "logo": "kaplan",
+    "casestudy": true
+  },
+  {
+    "id": "modusks",
+    "name": "Kickstart Practice Reboot",
+    "logo": "modus",
+    "casestudy": true
+  }
+]

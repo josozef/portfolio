@@ -8,10 +8,10 @@ const Header = () => {
       </span>
       <nav className="justify-self-end">
         <ul className="uppercase text-lg">
-          <li className="inline-block mr-4">
+          <li className="inline-block mr-4 hidden">
             <a href="/project">Work</a>
           </li>
-          <li className="inline-block text-gray-mid">About Me</li>
+          <li className="inline-block text-gray-mid hidden">About Me</li>
         </ul>
       </nav>
     </header>
