@@ -1,0 +1,17 @@
+:root {
+  --default-primary: #1351c4;
+  --default-primary-dark: #0d3683;
+  --default-primary-light: #f7f5ff;
+  --default-background-gray: #f9fafa;
+  --default-background-white: #ffffff;
+
+  --kaplan-primary: #1e0576;
+  --kaplan-primary-dark: #170458;
+  --kaplan-primary-light: #f7f5ff;
+  --kaplan-background-gray: #f9fafa;
+
+  --aarp-primary: #c23935;
+  --aarp-primary-dark: #82100d;
+  --aarp-primary-light: #fff5f5;
+  --aarp-background-gray: #faf9fa;
+}

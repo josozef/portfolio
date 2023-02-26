@@ -1,3 +1,42 @@
-header {
-  @apply grid grid-cols-2 mx-16 my-6;
+.home {
+    --header-background-color: theme("colors.white");
+    --header-logo-color: theme("colors.gray.900");
+    --header-link-color: theme("colors.gray.900");
+    --header-link-active-color: theme("colors.gray.700");
+}
+
+.aarp {
+    --header-background-color: var(--aarp-primary);
+    --header-logo-color: theme("colors.white");
+    --header-link-color: theme("colors.white");
+    --header-link-active-color: theme("colors.gray.200");
+}
+
+.kaplan {
+    --header-background-color: var(--kaplan-primary);
+    --header-logo-color: theme("colors.white");
+    --header-link-color: theme("colors.white");
+    --header-link-active-color: theme("colors.gray.200");
+}
+
+
+.header {
+    
+    @apply grid grid-cols-2 px-16 py-6;
+    background-color: var(--header-background-color);
+        
+    .header-logo {
+        @apply font-display text-2xl font-semibold;
+        color: var(--header-logo-color);
+    }
+    
+    .header-link {
+
+        @apply uppercase text-lg inline-block;
+        color: var(--header-link-color);
+    
+        &.active {  
+            color: var(--header-link-active-color);
+         }
+    }
 }

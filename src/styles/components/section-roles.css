@@ -1,0 +1,12 @@
+.aarp {
+  --sectionroles-background-color: var(--aarp-primary-dark);
+}
+
+.kaplan {
+  --sectionroles-background-color: var(--kaplan-primary-dark);
+}
+
+.section-roles {
+  background-color: var(--sectionroles-background-color);
+  @apply pl-12 py-4 font-body;
+}

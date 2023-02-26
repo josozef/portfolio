@@ -405,13 +405,135 @@ Ensure the default browser behavior of the `hidden` attribute.
 p {
   margin-bottom: 1rem;
 }
-header {
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+:root {
+  --default-primary: #1351c4;
+  --default-primary-dark: #0d3683;
+  --default-primary-light: #f7f5ff;
+  --default-background-gray: #f9fafa;
+  --default-background-white: #ffffff;
+
+  --kaplan-primary: #1e0576;
+  --kaplan-primary-dark: #170458;
+  --kaplan-primary-light: #f7f5ff;
+  --kaplan-background-gray: #f9fafa;
+
+  --aarp-primary: #c23935;
+  --aarp-primary-dark: #82100d;
+  --aarp-primary-light: #fff5f5;
+  --aarp-background-gray: #faf9fa;
+}
+.home {
+    --header-background-color: #ffffff;
+    --header-logo-color: #222C3F;
+    --header-link-color: #222C3F;
+    --header-link-active-color: #666F7F;
+}
+.aarp {
+    --header-background-color: var(--aarp-primary);
+    --header-logo-color: #ffffff;
+    --header-link-color: #ffffff;
+    --header-link-active-color: #E4E7EC;
+}
+.kaplan {
+    --header-background-color: var(--kaplan-primary);
+    --header-logo-color: #ffffff;
+    --header-link-color: #ffffff;
+    --header-link-active-color: #E4E7EC;
+}
+.header {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+    background-color: var(--header-background-color);
+}
+.header .header-logo {
+  font-family: 'Poppins', serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+        color: var(--header-logo-color);
+}
+.header .header-link {
+  display: inline-block;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+        color: var(--header-link-color);
+}
+.header .header-link.active {  
+            color: var(--header-link-active-color);
+         }
+.aarp {
+  --projecthero-background-color: var(--aarp-primary);
+}
+.kaplan {
+  --projecthero-background-color: var(--kaplan-primary);
+}
+.project-hero {
+  background-color: var(--projecthero-background-color);
+  padding-left: 3rem;
+  padding-top: 3rem;
+  font-family: 'Poppins', serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.aarp {
+  --sectionroles-background-color: var(--aarp-primary-dark);
+}
+.kaplan {
+  --sectionroles-background-color: var(--kaplan-primary-dark);
+}
+.section-roles {
+  background-color: var(--sectionroles-background-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  font-family: 'Graphik', serif;
+}
+.aarp {
+  --sectionteam-background-color: var(--aarp-primary-light);
+}
+.kaplan {
+  --sectionteam-background-color: var(--kaplan-primary-light);
+}
+.section-team {
+  background-color: var(--sectionteam-background-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  font-family: 'Graphik', serif;
+}
+.aarp {
+  --sectioncontent-background-color: var(--aarp-background-gray);
+}
+.kaplan {
+  --sectioncontent-background-color: var(--kaplan-background-gray);
+}
+.section-content {
+  background-color: var(--default-background-white);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+  font-family: 'Graphik', serif;
+}
+.section-content.section-content--alt {
+    background-color: var(--sectioncontent-background-color);
+  }
+.section-content h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+.section-content ul {
+  margin-bottom: 1rem;
+  list-style-type: disc;
+}
+.section-content ul li {
+  margin-left: 1rem;
 }
 .absolute {
   position: absolute;
@@ -440,6 +562,9 @@ header {
 .mr-2 {
   margin-right: 0.5rem;
 }
+.mt-11 {
+  margin-top: 2.75rem;
+}
 .inline-block {
   display: inline-block;
 }
@@ -449,6 +574,12 @@ header {
 .hidden {
   display: none;
 }
+.h-16 {
+  height: 4rem;
+}
+.w-16 {
+  width: 4rem;
+}
 .max-w-\[25\%\] {
   max-width: 25%;
 }
@@ -457,6 +588,15 @@ header {
 }
 .basis-1\/2 {
   flex-basis: 50%;
+}
+.basis-2\/12 {
+  flex-basis: 16.666667%;
+}
+.basis-4\/12 {
+  flex-basis: 33.333333%;
+}
+.basis-10\/12 {
+  flex-basis: 83.333333%;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -520,17 +660,13 @@ header {
 .font-display {
   font-family: 'Poppins', serif;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .text-xl {
   font-size: 1.25rem;
@@ -540,14 +676,25 @@ header {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.font-semibold {
-  font-weight: 600;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .font-medium {
   font-weight: 500;
 }
+.font-semibold {
+  font-weight: 600;
+}
 .uppercase {
   text-transform: uppercase;
+}
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 .text-medium {
   --tw-text-opacity: 1;
@@ -556,6 +703,10 @@ header {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-standard {
+  --tw-text-opacity: 1;
+  color: rgb(34 44 63 / var(--tw-text-opacity));
 }
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);

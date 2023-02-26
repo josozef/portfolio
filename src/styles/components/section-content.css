@@ -1,0 +1,27 @@
+.aarp {
+  --sectioncontent-background-color: var(--aarp-background-gray);
+}
+
+.kaplan {
+  --sectioncontent-background-color: var(--kaplan-background-gray);
+}
+
+.section-content {
+  background-color: var(--default-background-white);
+  @apply pl-12 py-4 font-body;
+
+  &.section-content--alt {
+    background-color: var(--sectioncontent-background-color);
+  }
+
+  h2 {
+    @apply text-xl font-medium mb-2;
+  }
+
+  ul {
+    @apply mb-4 list-disc;
+    li {
+      @apply ml-4;
+    }
+  }
+}
