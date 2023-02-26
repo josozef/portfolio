@@ -1,0 +1,12 @@
+.aarp {
+  --sectionteam-background-color: var(--aarp-primary-light);
+}
+
+.kaplan {
+  --sectionteam-background-color: var(--kaplan-primary-light);
+}
+
+.section-team {
+  background-color: var(--sectionteam-background-color);
+  @apply pl-12 py-4 font-body;
+}

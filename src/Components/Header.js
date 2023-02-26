@@ -2,16 +2,18 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header>
-      <span className="font-display text-2xl font-semibold text-gray-dark">
+    <header className="header">
+      <span className="header-logo">
         <a href="/">joe.mcneil</a>
       </span>
       <nav className="justify-self-end">
-        <ul className="uppercase text-lg">
-          <li className="inline-block mr-4 hidden">
-            <a href="/project">Work</a>
+        <ul className="">
+          <li className="header-link mr-4">
+            <a href="/k12learnerjourney">Work</a>
           </li>
-          <li className="inline-block text-gray-mid hidden">About Me</li>
+          <li className="header-link active hidden">
+              <a href="/aarpchatbot">About Me</a>
+          </li>
         </ul>
       </nav>
     </header>

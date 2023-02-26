@@ -1,0 +1,12 @@
+.aarp {
+  --projecthero-background-color: var(--aarp-primary);
+}
+
+.kaplan {
+  --projecthero-background-color: var(--kaplan-primary);
+}
+
+.project-hero {
+  background-color: var(--projecthero-background-color);
+  @apply pl-12 pt-12 text-4xl font-display;
+}

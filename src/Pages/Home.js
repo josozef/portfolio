@@ -5,7 +5,7 @@ import ProjectCard from "../Components/ProjectCard";
 
 const Home = () => {
   return (
-    <div className="main">
+    <div className="main home">
       <Header />
       <Hero />
       <div className="bg-gray-50 p-16">
