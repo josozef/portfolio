@@ -1,63 +1,63 @@
 import React from "react";
-import classNames from "classnames";
+import { cn } from "../../lib/utils";
 
-/**
- * Card component for containing content
- * Inspired by shadcn/ui design principles
- */
-const Card = ({ className = "", children, ...props }) => {
-  return (
-    <div
-      className={classNames(
-        "bg-white rounded-lg border border-gray-200 shadow-sm",
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </div>
-  );
-};
+const Card = React.forwardRef(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      className
+    )}
+    {...props}
+  />
+));
+Card.displayName = "Card";
 
-const CardHeader = ({ className = "", children }) => {
-  return (
-    <div className={classNames("flex flex-col space-y-1.5 p-6", className)}>
-      {children}
-    </div>
-  );
-};
+const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    {...props}
+  />
+));
+CardHeader.displayName = "CardHeader";
 
-const CardTitle = ({ className = "", children }) => {
-  return (
-    <h3 className={classNames("text-2xl font-semibold leading-none tracking-tight", className)}>
-      {children}
-    </h3>
-  );
-};
+const CardTitle = React.forwardRef(({ className, children, ...props }, ref) => (
+  <h3
+    ref={ref}
+    className={cn(
+      "text-2xl font-semibold leading-none tracking-tight",
+      className
+    )}
+    {...props}
+  >
+    {children}
+  </h3>
+));
+CardTitle.displayName = "CardTitle";
 
-const CardDescription = ({ className = "", children }) => {
-  return (
-    <p className={classNames("text-sm text-gray-500", className)}>
-      {children}
-    </p>
-  );
-};
+const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
+  <p
+    ref={ref}
+    className={cn("text-sm text-muted-foreground", className)}
+    {...props}
+  />
+));
+CardDescription.displayName = "CardDescription";
 
-const CardContent = ({ className = "", children }) => {
-  return (
-    <div className={classNames("p-6 pt-0", className)}>
-      {children}
-    </div>
-  );
-};
+const CardContent = React.forwardRef(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+));
+CardContent.displayName = "CardContent";
 
-const CardFooter = ({ className = "", children }) => {
-  return (
-    <div className={classNames("flex items-center p-6 pt-0", className)}>
-      {children}
-    </div>
-  );
-};
+const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center p-6 pt-0", className)}
+    {...props}
+  />
+));
+CardFooter.displayName = "CardFooter";
 
 Card.Header = CardHeader;
 Card.Title = CardTitle;
@@ -65,4 +65,5 @@ Card.Description = CardDescription;
 Card.Content = CardContent;
 Card.Footer = CardFooter;
 
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 export default Card;

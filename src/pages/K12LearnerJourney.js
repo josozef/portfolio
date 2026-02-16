@@ -1,21 +1,8 @@
-// Components
-import Header from "../components/Header";
-import ProjectHero from "../components/ProjectHero";
-import SectionRoles from "../components/SectionRoles";
-import HeroImage from "../images/projectassets/kaplanlj/lj-architect.jpg";
+import React from "react";
+import { Navigate } from "react-router-dom";
 
 const K12LearnerJourney = () => {
-  return (
-    <div className="main kaplan">
-      <Header />
-      <ProjectHero
-        title="Learner Journey"
-        description="Better understand Kapla’s 1M+ learners across multiple programs and platforms."
-        heroimage={HeroImage}
-      />
-      <SectionRoles roles="Solo UX Researcher" />
-    </div>
-  );
+  return <Navigate to="/work/k12-learner-journey" replace />;
 };
 
 export default K12LearnerJourney;

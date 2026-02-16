@@ -1,13 +1,18 @@
 import React from "react";
+import Container from "./ui/Container";
 
-const SectionTeam = (props) => {
+const SectionTeam = ({ team }) => {
   return (
-    <div className="section-team flex items-center">
-      <div className="basis-2/12 text-lg uppercase text-standard tracking-wide">
-        Team Members
-      </div>
-      <div className="basis-10/12 text-lg text-standard">{props.team}</div>
-    </div>
+    <section className="brand-team py-6">
+      <Container>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <span className="text-sm font-medium uppercase tracking-wider text-foreground/60">
+            Team Members
+          </span>
+          <p className="text-sm text-foreground/80">{team}</p>
+        </div>
+      </Container>
+    </section>
   );
 };
 

@@ -1,22 +1,57 @@
 import React from "react";
-import { ArrowLeftIcon } from "@heroicons/react/outline";
+import { useNavigate } from "react-router-dom";
+import { cn } from "../lib/utils";
+import Container from "./ui/Container";
 
-const ProjectHero = (props) => {
+const ProjectHero = ({ title, description, heroimage, imageClass }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="project-hero flex items-center">
-      <div className="basis-2/12">
-        <ArrowLeftIcon className="h-16 w-16 text-white" />
-      </div>
-      <div className="basis-1/2">
-        <h1 className="text-5xl text-white font-semibold">{props.title}</h1>
-        <p className="text-lg text-white mt-11 font-medium">
-          {props.description}
-        </p>
-      </div>
-      <div className="basis-4/12 ml-16">
-        <img src={props.heroimage} alt="" />
-      </div>
-    </div>
+    <section className="brand-hero py-12 md:py-20">
+      <Container>
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1 space-y-6">
+            <button
+              onClick={() => navigate(-1)}
+              className="inline-flex items-center text-white/70 hover:text-white transition-colors text-sm"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                className="mr-2"
+              >
+                <path
+                  d="M12.5 15L7.5 10L12.5 5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Back
+            </button>
+            <h1 className="text-4xl md:text-5xl font-semibold text-white tracking-tight">
+              {title}
+            </h1>
+            <p className="text-lg text-white/80 leading-relaxed max-w-xl">
+              {description}
+            </p>
+          </div>
+          {heroimage && (
+            <div
+              className={cn(
+                "flex-shrink-0 w-full md:w-2/5",
+                imageClass
+              )}
+            >
+              <img src={heroimage} alt="" className="w-full" />
+            </div>
+          )}
+        </div>
+      </Container>
+    </section>
   );
 };
 

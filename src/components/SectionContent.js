@@ -1,18 +1,28 @@
 import React from "react";
+import { cn } from "../lib/utils";
+import Container from "./ui/Container";
 
-const SectionContent = (props) => {
+const SectionContent = ({ title, alt, children }) => {
   return (
-    <div
-      className={
-        "section-content flex items-top " +
-        (props.alt ? "section-content--alt" : "")
-      }
+    <section
+      className={cn(
+        "py-10 md:py-14",
+        alt ? "brand-content-alt" : "bg-background"
+      )}
     >
-      <div className="basis-2/12 text-lg uppercase text-standard tracking-wide">
-        {props.title}
-      </div>
-      <div className="basis-10/12 text-lg text-standard">{props.children}</div>
-    </div>
+      <Container>
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+          <div className="md:w-1/5 flex-shrink-0">
+            <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
+              {title}
+            </h2>
+          </div>
+          <div className="md:w-4/5 prose prose-gray max-w-none text-foreground">
+            {children}
+          </div>
+        </div>
+      </Container>
+    </section>
   );
 };
 

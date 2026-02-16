@@ -1,64 +1,57 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Card from "./ui/Card";
+import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from "./ui/Card";
 import Badge from "./ui/Badge";
 
-/**
- * CaseStudyCard - Modern card component for displaying case studies
- * Inspired by shadcn/ui design principles
- */
 const CaseStudyCard = ({ caseStudy }) => {
   const navigate = useNavigate();
-  
+
   const handleClick = () => {
     navigate(`/work/${caseStudy.slug}`);
   };
 
   return (
     <Card
-      className="cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden group"
+      className="cursor-pointer overflow-hidden transition-all hover:shadow-lg hover:-translate-y-0.5 group"
       onClick={handleClick}
     >
       {/* Image Section */}
-      {caseStudy.id && (
-        <div className="aspect-video w-full overflow-hidden bg-gray-100">
+      {caseStudy.cardImage && (
+        <div className="aspect-video w-full overflow-hidden border-b">
           <img
-            src={require("../images/projectcards/" + caseStudy.id + ".png")}
+            src={require("../images/projectcards/" + caseStudy.cardImage + ".png")}
             alt={caseStudy.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       )}
 
-      <Card.Header>
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex-1">
-            <Card.Title className="text-xl mb-2 group-hover:text-primary transition-colors">
+      <CardHeader>
+        <div className="flex items-start justify-between">
+          <div className="flex-1 space-y-1">
+            <CardTitle className="text-lg group-hover:text-primary transition-colors">
               {caseStudy.name}
-            </Card.Title>
-            <div className="flex items-center gap-2 text-sm text-gray-500">
-              <span>{caseStudy.client}</span>
-              {caseStudy.year && (
-                <>
-                  <span>•</span>
-                  <span>{caseStudy.year}</span>
-                </>
-              )}
-            </div>
+            </CardTitle>
+            <CardDescription>
+              {caseStudy.client}
+              {caseStudy.year && <span className="ml-1">&middot; {caseStudy.year}</span>}
+            </CardDescription>
           </div>
           {caseStudy.logo && (
-            <div className="flex-shrink-0 ml-4 max-w-[80px]">
+            <div className="flex-shrink-0 ml-4 w-16">
               <img
                 src={require("../images/logos/" + caseStudy.logo + ".png")}
                 alt={caseStudy.client + " logo"}
-                className="w-full h-auto"
+                className="w-full h-auto opacity-60 group-hover:opacity-100 transition-opacity"
               />
             </div>
           )}
         </div>
+      </CardHeader>
 
+      <CardContent>
         {/* Roles */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-1.5 mb-4">
           {caseStudy.roles.map((role, index) => (
             <Badge key={index} variant="secondary">
               {role}
@@ -67,15 +60,29 @@ const CaseStudyCard = ({ caseStudy }) => {
         </div>
 
         {/* Summary */}
-        <Card.Description className="text-base leading-relaxed">
+        <p className="text-sm text-muted-foreground leading-relaxed">
           {caseStudy.summary}
-        </Card.Description>
-      </Card.Header>
+        </p>
+      </CardContent>
 
-      <Card.Footer className="text-sm text-primary font-medium group-hover:gap-2 transition-all">
+      <CardFooter className="text-sm font-medium text-primary">
         View Case Study
-        <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
-      </Card.Footer>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          className="ml-1 transition-transform group-hover:translate-x-0.5"
+        >
+          <path
+            d="M6 3L11 8L6 13"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </CardFooter>
     </Card>
   );
 };
