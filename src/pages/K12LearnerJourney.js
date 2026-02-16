@@ -1,7 +1,7 @@
 // Components
-import Header from "../Components/Header";
-import ProjectHero from "../Components/ProjectHero";
-import SectionRoles from "../Components/SectionRoles";
+import Header from "../components/Header";
+import ProjectHero from "../components/ProjectHero";
+import SectionRoles from "../components/SectionRoles";
 import HeroImage from "../images/projectassets/kaplanlj/lj-architect.jpg";
 
 const K12LearnerJourney = () => {

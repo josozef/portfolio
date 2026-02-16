@@ -1,9 +1,9 @@
 // Components
-import Header from "../Components/Header";
-import ProjectHero from "../Components/ProjectHero";
-import SectionRoles from "../Components/SectionRoles";
-import SectionTeam from "../Components/SectionTeam";
-import SectionContent from "../Components/SectionContent";
+import Header from "../components/Header";
+import ProjectHero from "../components/ProjectHero";
+import SectionRoles from "../components/SectionRoles";
+import SectionTeam from "../components/SectionTeam";
+import SectionContent from "../components/SectionContent";
 import HeroImage from "../images/projectassets/aarpcb/iphone-hello.png";
 
 const AARPChatBot = () => {
