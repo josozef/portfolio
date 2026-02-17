@@ -1,17 +1,57 @@
-:root {
-  --default-primary: #1351c4;
-  --default-primary-dark: #0d3683;
-  --default-primary-light: #f7f5ff;
-  --default-background-gray: #f9fafa;
-  --default-background-white: #ffffff;
+/* Brand-specific overrides for case study pages */
 
-  --kaplan-primary: #1e0576;
-  --kaplan-primary-dark: #170458;
-  --kaplan-primary-light: #f7f5ff;
-  --kaplan-background-gray: #f9fafa;
+.brand-certsolv {
+  --brand-primary: 210 60% 35%;
+  --brand-primary-dark: 210 60% 25%;
+  --brand-primary-light: 210 60% 96%;
+  --brand-bg-alt: 210 14% 97%;
 
-  --aarp-primary: #c23935;
-  --aarp-primary-dark: #82100d;
-  --aarp-primary-light: #fff5f5;
-  --aarp-background-gray: #faf9fa;
+  --header-bg: hsl(var(--brand-primary));
+  --header-fg: 0 0% 100%;
+  --hero-bg: hsl(var(--brand-primary));
+  --roles-bg: hsl(var(--brand-primary-dark));
+  --team-bg: hsl(var(--brand-primary-light));
+  --content-alt-bg: hsl(var(--brand-bg-alt));
+}
+
+.brand-kaplan {
+  --brand-primary: 264 93% 24%;
+  --brand-primary-dark: 264 93% 18%;
+  --brand-primary-light: 260 100% 98%;
+  --brand-bg-alt: 210 14% 98%;
+
+  --header-bg: hsl(var(--brand-primary));
+  --header-fg: 0 0% 100%;
+  --hero-bg: hsl(var(--brand-primary));
+  --roles-bg: hsl(var(--brand-primary-dark));
+  --team-bg: hsl(var(--brand-primary-light));
+  --content-alt-bg: hsl(var(--brand-bg-alt));
+}
+
+.brand-aarp {
+  --brand-primary: 1 60% 48%;
+  --brand-primary-dark: 1 82% 28%;
+  --brand-primary-light: 0 100% 98%;
+  --brand-bg-alt: 300 5% 98%;
+
+  --header-bg: hsl(var(--brand-primary));
+  --header-fg: 0 0% 100%;
+  --hero-bg: hsl(var(--brand-primary));
+  --roles-bg: hsl(var(--brand-primary-dark));
+  --team-bg: hsl(var(--brand-primary-light));
+  --content-alt-bg: hsl(var(--brand-bg-alt));
+}
+
+.brand-modus {
+  --brand-primary: 191 100% 50%;
+  --brand-primary-dark: 191 100% 40%;
+  --brand-primary-light: 191 100% 95%;
+  --brand-bg-alt: 210 14% 98%;
+
+  --header-bg: hsl(var(--brand-primary-dark));
+  --header-fg: 0 0% 100%;
+  --hero-bg: hsl(var(--brand-primary-dark));
+  --roles-bg: hsl(var(--brand-primary-dark));
+  --team-bg: hsl(var(--brand-primary-light));
+  --content-alt-bg: hsl(var(--brand-bg-alt));
 }

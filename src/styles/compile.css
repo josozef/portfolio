@@ -1,7 +1,64 @@
 @import "tailwindcss/base";
-@import "./base.css";
-
+@import "./base/fonts.css";
+@import "./base/brands.css";
 @import "tailwindcss/components";
-@import "./components.css";
-
 @import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 80% 42%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 80% 42%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Brand-themed utility classes */
+.brand-header {
+  background-color: var(--header-bg, hsl(var(--background)));
+  color: var(--header-fg, hsl(var(--foreground)));
+}
+
+.brand-hero {
+  background-color: var(--hero-bg, hsl(var(--primary)));
+}
+
+.brand-roles {
+  background-color: var(--roles-bg, hsl(var(--primary)));
+}
+
+.brand-team {
+  background-color: var(--team-bg, hsl(var(--secondary)));
+}
+
+.brand-content-alt {
+  background-color: var(--content-alt-bg, hsl(var(--muted)));
+}

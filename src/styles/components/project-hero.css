@@ -6,6 +6,10 @@
   --projecthero-background-color: var(--kaplan-primary);
 }
 
+.modus {
+  --projecthero-background-color: var(--modus-primary-dark);
+}
+
 .project-hero {
   background-color: var(--projecthero-background-color);
   @apply pl-12 pt-12 text-4xl font-display;

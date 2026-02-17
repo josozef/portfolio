@@ -1,5 +1,42 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2570e30b-a420-41d8-a948-a571f6e318c2/deploy-status)](https://app.netlify.com/sites/josephemcneil/deploys)
 
+# Joe McNeil Portfolio
+
+A modern, component-based portfolio website showcasing UX research, design, and strategy work. Built with React, Tailwind CSS, and a comprehensive reusable component library inspired by shadcn/ui design principles.
+
+## Features
+
+- 🎨 **Modern UI Component Library**: Reusable components (Button, Card, Badge, Dropdown, etc.)
+- 📱 **Responsive Design**: Works beautifully on all devices
+- 🎯 **Data-Driven**: Easy content management through structured data files
+- 🎨 **Brand Theming**: Dynamic color theming for different clients
+- ♿ **Accessible**: Keyboard navigation, ARIA labels, semantic HTML
+- 🚀 **Performance**: Optimized React components and lazy-loaded images
+
+## Project Structure
+
+```
+src/
+├── Components/
+│   ├── ui/              # Reusable UI component library
+│   ├── CaseStudyCard.js # Feature components
+│   └── Header.js        # Navigation
+├── Pages/               # Page components
+├── data/               # Structured content data
+└── styles/             # CSS and theming
+```
+
+## Documentation
+
+- **[COMPONENT_LIBRARY.md](./COMPONENT_LIBRARY.md)**: Complete component library documentation
+- **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)**: Detailed project overview and architecture
+
+## Quick Start
+
+1. Install dependencies: `npm install`
+2. Start development server: `npm start`
+3. Open [http://localhost:3000](http://localhost:3000)
+
 ## Available Scripts
 
 In the project directory, you can run:
