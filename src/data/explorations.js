@@ -8,6 +8,7 @@ export const explorations = [
       "A professional, minimalist AI-powered web application for streamlining board member appointment processes with an intelligent concierge system.",
     tags: ["AI Concierge", "Vanilla JS", "CSS Design System", "Vibe Coding"],
     thumbnail: null,
+    heroImage: "diligent-console-hero.png",
     githubUrl: "https://github.com/josozef/diligent-console",
     liveUrl: "https://diligent-console.vercel.app",
     objective:

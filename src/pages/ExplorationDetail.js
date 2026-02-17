@@ -114,7 +114,7 @@ const ExplorationDetail = () => {
       {/* Content */}
       <Section>
         <Container>
-          <div className="max-w-3xl space-y-12">
+          <div className="max-w-4xl space-y-12">
             {/* Objective */}
             <div className="space-y-4">
               <h2 className="text-2xl font-semibold tracking-tight">
@@ -123,6 +123,18 @@ const ExplorationDetail = () => {
               <p className="text-muted-foreground leading-relaxed">
                 {exploration.objective}
               </p>
+              {exploration.heroImage && (
+                <div className="rounded-lg border overflow-hidden mt-2">
+                  <img
+                    src={require("../images/projectassets/" + exploration.heroImage)}
+                    alt={exploration.title}
+                    className="w-full"
+                  />
+                  <div className="px-4 py-2 bg-muted/50 text-xs text-muted-foreground">
+                    {exploration.title} — application interface
+                  </div>
+                </div>
+              )}
             </div>
 
             {exploration.details && exploration.details.length > 0 && (

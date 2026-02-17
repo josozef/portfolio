@@ -774,6 +774,9 @@ video {
 .max-w-3xl {
   max-width: 48rem;
 }
+.max-w-4xl {
+  max-width: 56rem;
+}
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -940,11 +943,11 @@ video {
 .border-t {
   border-top-width: 1px;
 }
+.border-background {
+  border-color: hsl(var(--background));
+}
 .border-background\/20 {
   border-color: hsl(var(--background) / 0.2);
-}
-.border-background\/30 {
-  border-color: hsl(var(--background) / 0.3);
 }
 .border-border {
   border-color: hsl(var(--border));
@@ -1000,6 +1003,9 @@ video {
 }
 .bg-secondary {
   background-color: hsl(var(--secondary));
+}
+.bg-transparent {
+  background-color: transparent;
 }
 .bg-white\/15 {
   background-color: rgb(255 255 255 / 0.15);
